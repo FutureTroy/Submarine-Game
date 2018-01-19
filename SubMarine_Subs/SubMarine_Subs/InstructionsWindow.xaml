@@ -1,0 +1,27 @@
+﻿<Window x:Class="SubMarine_Subs.InstructionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SubMarine_Subs"
+        mc:Ignorable="d"
+        Title="InstructionsWindow" Height="465.866" Width="300">
+    <Grid Margin="0,0,0,1">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF69D2E7" Offset="0"/>
+                <GradientStop Color="#FF29ABE2" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="Instructions_About" Margin="29,69,0,0" TextWrapping="Wrap" Height="320" Width="236" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FFA7DBD8" Foreground="#FF272626"><Run Text="TextBlock"/></TextBlock>
+        <Button x:Name="InstructionsCloseButton" Content="CLOSE" HorizontalAlignment="Left" Margin="190,405,0,0" Width="75" Background="#FFF38630" Foreground="White" Height="20" VerticalAlignment="Top" Click="InstructionsCloseButton_Click"/>
+        <TextBox x:Name="InstuctTitle" HorizontalAlignment="Left" Height="38" Margin="24,18,0,0" TextWrapping="Wrap" Text="Instructions" VerticalAlignment="Top" Width="217" Background="{x:Null}" Foreground="#FFF38630" FontFamily="Broadway" FontWeight="Bold" FontSize="29.333"/>
+        <ComboBox x:Name="LanguageCBox" HorizontalAlignment="Left" Margin="29,403,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="-1.143,6.124" Text="Select Language">
+            <ComboBoxItem Content="--Select Language--" HorizontalAlignment="Left" Width="120" Selected="ComboBoxItem_Selected_None"/>
+            <ComboBoxItem Content="English" HorizontalAlignment="Left" Width="120" Selected="ComboBoxItem_Selected_ENG"/>
+            <ComboBoxItem Content="Spanish" HorizontalAlignment="Left" Width="120" Selected="ComboBoxItem_Selected_SPN"/>
+            <ComboBoxItem Content="French" HorizontalAlignment="Left" Width="120" Selected="ComboBoxItem_Selected_FRN"/>
+        </ComboBox>
+
+    </Grid>
+</Window>

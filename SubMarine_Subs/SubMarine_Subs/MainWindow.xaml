@@ -1,0 +1,34 @@
+﻿<Window x:Class="SubMarine_Subs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SubMarine_Subs"
+        mc:Ignorable="d"
+        Title="Main Menu" Height="518.308" Width="811.103">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF29ABE2" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="683*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="103*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF69D2E7" Offset="0"/>
+                <GradientStop Color="#FF29ABE2" Offset="0.614"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="583" Margin="10,-66,0,-47" VerticalAlignment="Top" Width="783" Source="Resources/Logo.png" Grid.ColumnSpan="4"/>
+        <Image x:Name="image" HorizontalAlignment="Center" Height="156" Margin="2,322,8,0" VerticalAlignment="Top" Width="791" Source="/Resources/StartButtons.png" Stretch="UniformToFill" Grid.ColumnSpan="4"/>
+        <Button x:Name="MainInstructionsButton" Grid.ColumnSpan="2" Content="Button" HorizontalAlignment="Left" Margin="67,378,0,0" VerticalAlignment="Top" Width="183" Click="button_Click" Height="51" Opacity="0"/>
+        <Button x:Name="PlayButton" Grid.ColumnSpan="4" Content="Button" HorizontalAlignment="Left" Margin="548,378,0,0" VerticalAlignment="Top" Width="179" Height="51" Background="{x:Null}" Foreground="{x:Null}" Click="button_Click_1"/>
+    </Grid>
+</Window>

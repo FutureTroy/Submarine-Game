@@ -1,0 +1,101 @@
+﻿<Window x:Class="SubMarine_Subs.SubMarine_"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SubMarine_Subs"
+        mc:Ignorable="d"
+        Title="SubMarine!" Height="834.039" Width="1226.375">
+    <Grid Background="#FFCFECEA" Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="259*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="433" Margin="44,206,0,0" VerticalAlignment="Top" Width="699" Source="Resources/SandwichTable.png" Grid.RowSpan="2"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="134" Margin="905,8,0,0" VerticalAlignment="Top" Width="135" Source="Resources/LogoSmall.png"/>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="64" Margin="770,8,0,0" VerticalAlignment="Top" Width="143" Source="Resources/TimerWindow.png"/>
+        <ProgressBar x:Name="ProgBar" HorizontalAlignment="Left" Height="27" Margin="253,445,0,0" VerticalAlignment="Top" Width="471" Minimum="49" Background="#FF7CD5E6" Foreground="#FF8BC53E" Maximum="500" Grid.Row="1"/>
+        <Label x:Name="label1" Content="CUSTOMER" HorizontalAlignment="Left" Margin="52,47,0,0" VerticalAlignment="Top" Height="53" Width="172" Background="{x:Null}" Foreground="#FF4D4D4D" FontFamily="Broadway" FontSize="26.667"/>
+        <Label x:Name="label1_Copy" Content="ORDER" HorizontalAlignment="Left" Margin="112,87,0,0" VerticalAlignment="Top" Height="54" Width="112" Background="{x:Null}" Foreground="#FF4D4D4D" FontFamily="Broadway" FontSize="26.667"/>
+        <Button x:Name="OrderReadyBtn" Content="ORDER READY" HorizontalAlignment="Left" Margin="44,374,0,0" VerticalAlignment="Top" Width="170" Background="#FFF38630" Foreground="White" FontSize="21.333" Height="50" FontWeight="Bold" FontFamily="Bernard MT Condensed" Click="OrderReadyBtn_Click" Grid.Row="1"/>
+        <Label x:Name="label1_Copy1" Content="SANDWICH STATUS" HorizontalAlignment="Left" Margin="253,401,0,0" VerticalAlignment="Top" Height="31" Width="211" Background="{x:Null}" Foreground="#FF4D4D4D" FontFamily="Broadway" FontSize="18.667" Grid.Row="1"/>
+        <Image x:Name="image4_Copy" HorizontalAlignment="Left" Height="63" Margin="132,437,0,0" VerticalAlignment="Top" Width="82" Source="Resources/SkipSandwich.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.452" Grid.Row="1"/>
+        <Button x:Name="skipBtn" Content="Button" HorizontalAlignment="Left" Margin="132,438,0,0" VerticalAlignment="Top" Width="82" Height="62" Background="{x:Null}" Foreground="{x:Null}" Click="skipBtn_Click" Grid.Row="1"/>
+        <Image x:Name="image4_Copy1" HorizontalAlignment="Left" Height="63" Margin="44,437,0,0" VerticalAlignment="Top" Width="82" Source="Resources/Undo.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.452" Grid.Row="1"/>
+        <Button x:Name="undoBtn" Content="Button" HorizontalAlignment="Left" Margin="44,438,0,0" VerticalAlignment="Top" Width="81" Height="62" Background="{x:Null}" Foreground="{x:Null}" Click="undoBtn_Click" Grid.Row="1"/>
+        <Ellipse Fill="#FF4D4D4D" HorizontalAlignment="Left" Height="10" Margin="229,70,0,0" Stroke="#FF4D4D4D" VerticalAlignment="Top" Width="10"/>
+        <Ellipse Fill="#FF4D4D4D" HorizontalAlignment="Left" Height="10" Margin="229,98,0,0" Stroke="#FF4D4D4D" VerticalAlignment="Top" Width="10"/>
+        <Image x:Name="sandwichbottom" HorizontalAlignment="Left" Height="81" Margin="204,186,0,0" VerticalAlignment="Top" Width="375" Source= "Resources/BottomBun.png" Stretch="UniformToFill" Grid.Row="1"/>
+        <Image x:Name="Tartarsauce" HorizontalAlignment="Left" Height="49" Margin="206,191,0,0" VerticalAlignment="Top" Width="369" Source="Resources/mayo.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="lettuce" HorizontalAlignment="Left" Height="81" Margin="209,190,0,0" VerticalAlignment="Top" Width="375" Source="Resources/lettuceSan.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="BCod" HorizontalAlignment="Left" Height="81" Margin="204,168,0,0" VerticalAlignment="Top" Width="378" Source="Resources/2Cod.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="YPeppers" HorizontalAlignment="Left" Height="81" Margin="207,151,0,0" VerticalAlignment="Top" Width="375" Source="Resources/YellowPeppers.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="lemonTilapia" HorizontalAlignment="Left" Height="81" Margin="198,143,0,0" VerticalAlignment="Top" Width="375" Source="Resources/BreadedCod.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Label x:Name="TimerSeclbl" Content="00" HorizontalAlignment="Left" Margin="715,16,0,0" VerticalAlignment="Top" Foreground="Red" FontFamily="OCR A Extended" FontSize="29.333" FontWeight="Bold"/>
+        <Grid HorizontalAlignment="Left" Height="631" Margin="774,147,0,0" VerticalAlignment="Top" Width="413" Background="#FFF3FFFE" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="600*"/>
+                <RowDefinition Height="31*"/>
+            </Grid.RowDefinitions>
+            <Image Source="Resources/LTilapia.png" Height="100" Margin="20,5,278,495"/>
+            <Image Source="Resources/SeaSalt.png" Height="100" Margin="141,5,143,495" />
+            <Button x:Name="SeaSaltBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="182,109,185,461" Background="#FFA6E2EE" Click="SeaSaltBtn_Click"/>
+            <Image Source="Resources/YPeppers.png" Height="100" Margin="29,153,280,347"/>
+            <Button x:Name="YPeppersBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="52,259,315,311" Click="YPeppersBtn_Click" Background="#FFA6E2EE"/>
+            <Image Source="Resources/BCod.png" Height="100" Margin="272,5,38,495"/>
+            <Button x:Name="bCodBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="298,109,69,461" Click="bCodBtn_Click" Background="#FFA6E2EE"/>
+            <Image Source="Resources/Lettuce.png" Height="100" Margin="141,153,143,347" />
+            <Image Source="Resources/Tomatoes.png" Height="100" Margin="256,153,28,347" />
+            <Button x:Name="lettuceBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="180,259,187,311" Click="lettuceBtn_Click" Background="#FFA6E2EE"/>
+            <Button x:Name="TomatoBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="296,259,71,311" Background="#FFA6E2EE" Click="TomatoBtn_Click"/>
+            <Button x:Name="tilapiaBtn" Content="Add" HorizontalAlignment="Left" Margin="52,109,0,0" VerticalAlignment="Top" Width="46" Click="tilapiaBtn_Click" Height="28" Background="#FFA6E2EE"/>
+            <Image Source="Resources/OnionsInv.png" Height="100" Margin="20,309,264,191" />
+            <Image Source="Resources/shirmpInv.png" Height="100" Margin="141,309,143,191" />
+            <Image Source="Resources/CrawfishInv.png" Height="100" Margin="256,309,28,191" />
+            <Button x:Name="OnionBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="52,415,315,155" Click="OnionsBtn_Click" Background="#FFA6E2EE"/>
+            <Button x:Name="ShrimpBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="180,415,187,155" Click="ShrimpBtn_Click" Background="#FFA6E2EE"/>
+            <Button x:Name="CrawfishBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="298,415,69,155" Click="CrawfishBtn_Click" Background="#FFA6E2EE"/>
+            <Image Source="Resources/WheatInv.png" Height="100" Margin="256,467,28,33" />
+            <Button x:Name="WheatBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="298,573,69,28" Click="WheatBtn_Click" Background="#FFA6E2EE" Grid.RowSpan="2"/>
+            <Image Source="Resources/WhiteInv.png" Height="100" Margin="138,467,146,33" />
+            <Button x:Name="WhiteBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="180,573,187,28" Click="WhiteBtn_Click" Background="#FFA6E2EE" Grid.RowSpan="2"/>
+            <Image Source="Resources/tartarInv.png" Height="100" Margin="13,467,271,33" />
+            <Button x:Name="TartarBtn" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center"
+            	Padding="10,5" Margin="55,573,312,28" Click="TartarBtn_Click" Background="#FFA6E2EE" Grid.RowSpan="2"/>
+        </Grid>
+        <Rectangle Fill="#FFCFECEA" HorizontalAlignment="Left" Height="44" Margin="661,14,0,0" StrokeThickness="3" VerticalAlignment="Top" Width="107" OpacityMask="#FFCFECEA"/>
+        <Button Content="Reset Timer" HorizontalAlignment="Left" Margin="774,92,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Visibility="Hidden"/>
+
+        <Label x:Name="finishedSubslbl" Content="0" HorizontalAlignment="Left" Margin="1107,52,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" FontFamily="Elephant"/>
+
+
+        <Image x:Name="Onions" HorizontalAlignment="Left" Height="95" Margin="207,137,0,0" VerticalAlignment="Top" Width="375" Source="Resources/Onions.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="tomato" HorizontalAlignment="Left" Height="35" Margin="204,191,0,0" VerticalAlignment="Top" Width="371" Source="Resources/tomato.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="salt" HorizontalAlignment="Left" Height="81" Margin="204,137,0,0" VerticalAlignment="Top" Width="375" Source="Resources/salt.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="crawfish" HorizontalAlignment="Left" Height="61" Margin="204,159,0,0" VerticalAlignment="Top" Width="371" Source="Resources/Crawfish.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="Shrimp" HorizontalAlignment="Left" Height="66" Margin="204,159,0,0" VerticalAlignment="Top" Width="378" Source="Resources/shrimp.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="wheatTop" HorizontalAlignment="Left" Height="81" Margin="198,111,0,0" VerticalAlignment="Top" Width="375" Source="Resources/wheatTop.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image x:Name="BunTop" HorizontalAlignment="Left" Height="81" Margin="198,117,0,0" VerticalAlignment="Top" Width="375" Source="Resources/TopBun.png" Stretch="UniformToFill" Grid.Row="1" Visibility="Hidden"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="1043,9,0,0" VerticalAlignment="Top" Width="100" Source="Resources/CompSubs.png"/>
+        <Rectangle Fill="#FFF3FFFE" HorizontalAlignment="Left" Height="173" Margin="268,7,0,0" Stroke="#FF4D4D4D" VerticalAlignment="Top" Width="426" StrokeThickness="3"/>
+        <Label Content="Sandwich" HorizontalAlignment="Left" Margin="291,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Perpetua Titling MT"/>
+        <Label x:Name="sandwichlbl" Content="The Yellow Submarine" HorizontalAlignment="Left" Margin="291,56,0,0" VerticalAlignment="Top" FontFamily="Meiryo UI"/>
+        <Label Content="Next Ingredient" HorizontalAlignment="Left" Margin="534,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Perpetua Titling MT"/>
+        <Label x:Name="sandwichlbl_Copy" Content="Lettuce&#xD;&#xA;Breaded Cod&#xD;&#xA;Yellow Peppers&#xD;&#xA;Sea Salt&#xD;&#xA;White Bread" HorizontalAlignment="Left" Margin="549,55,0,0" VerticalAlignment="Top" FontFamily="Meiryo UI"/>
+        <Rectangle Fill="#FFF3FFFE" HorizontalAlignment="Left" Height="39" Margin="539,136,0,0" StrokeThickness="3" VerticalAlignment="Top" Width="107" OpacityMask="#FFCFECEA"/>
+        <Rectangle Fill="#FFCFECEA" HorizontalAlignment="Left" Height="26" Margin="549,180,0,0" StrokeThickness="3" VerticalAlignment="Top" Width="107" OpacityMask="#FFCFECEA"/>
+    </Grid>
+</Window>
